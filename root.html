@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="cartApp">
+   <head>
+      <meta charset="utf-8">
+      <title>My Shopping App</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  <link rel="stylesheet" href="css/reset.css"> -->
+      <link rel="stylesheet" href="content/css/normalize.css">
+      <link rel="stylesheet" href="content/css/bootstrap.css">
+      <link rel="stylesheet" href="content/css/main.css">
+      <link rel="stylesheet" href="content/css/app.css">
+    <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+       <style>
+        [ng-cloak],
+        .ng-cloak {
+          display: none !important;
+        }
+      </style>
+   </head>
+
+   <body ng-controller="cartCtrl as cart" ng-cloak>
+
+      <div ng-include="'./app/shoppingBag/shoppingBag.html'"></div>
+      <!-- Load JS Scripts -->
+      <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+      <script src="content/scripts/bootstrap.js"></script>
+     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+      <script src="content/scripts/angular.js"></script>
+      <script src="app/main.js"></script>
+      <script src="app/shoppingBag/shoppingBag.service.js"></script>
+      <script src="app/shoppingBag/shoppingBag.controller.js"></script>
+      <script src="app/prodDescription/prodDescription.directive.js"></script>
+   </body>
+
+</html>

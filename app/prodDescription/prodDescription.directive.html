@@ -1,0 +1,15 @@
+<section>
+  <p class="prod-title" ng-bind="(cartModal.product.p_variation|uppercase)+' '+(cartModal.product.p_name|uppercase)"></p>
+  <p>Style #:<span ng-bind="cartModal.product.p_style|uppercase"></span></p>
+  <p>Colour: <span class="prod-color" style="text-transform: capitalize;" ng-bind="cartModal.product.p_selected_color.name"></span></p>
+    <ul class="user-action">
+     <li>
+      <a  data-toggle = "modal" data-target="{{'#modal'+ cartModal.index}}">
+       EDIT
+      </a>
+     </li>
+     <li> <a ng-click="cartModal.remove({itemIndex:cartModal.index})"> X REMOVE</a></li>
+     <li> SAVE FOR LATER </li>
+   </ul>
+  <div ng-include="'app/prodDescription/modal.html'"></div>
+</section>

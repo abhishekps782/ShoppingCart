@@ -1,0 +1,95 @@
+<div class="container">
+    <header>
+        <h1 class='logo'> YOUR SHOPPING BAG </h1>
+
+    </header>
+    <main>
+        <div class="shoppingBagContainer">
+            <table class="table">
+                <tr class="table-header">
+                    <th ng-bind="(cart.items.length)+' '+'ITEMS'"></th>
+                    <th></th>
+                    <th>SIZE</th>
+                    <th>QTY</th>
+                    <th>PRICE</th>
+                </tr>
+                <tr ng-repeat="item in cart.items track by $index">
+                    <td><img ng-src="{{item.imageSrc}}" alt="{{item.p_variation}}"></td>
+                    <td id="prodDesc" style="width:300px;">
+                        <prod-description  index="{{$index}}" calculate="cart.calculateTotal()" remove="cart.remove(itemIndex)" item="item">
+                        </prod-description>
+                    </td>
+                    <td class="size" ng-bind="item.p_selected_size.code"></td>
+                    <td class="quantity" ng-bind="item.p_quantity"></td>
+                    <td class="price-col" ng-bind="(item.c_currency) + (item.p_price|number:2)"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="image-loader-div" ng-show="cart.showLoader">
+            <img class="spinner">
+        </div>
+    </main>
+    <hr/>
+    <section>
+        <div class="btm-container">
+            <aside class="col-lg-3">
+                <p class="help-cls">Need help or have questions?</p>
+                <p>Call Customer Service at 1-800-555-555</p>
+                <p>Chat with one of our stylists</p>
+                <p>See return & exchange policy</p>
+            </aside>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-8">
+                <div class="apply-coupon">
+                    <ul class="price-calc">
+                        <li>
+                           <span>ENTER PROMOTION CODE OR GIFT CARD</span>
+                             <span class="pull-right">
+                               <input type="text" class="input-sm">
+                               <button class="btn">APPLY</button>
+                             </span>
+                         </li>
+                    </ul>
+                </div>
+                <div class="cls-total">
+                    <table class="total-table" style="display:table">
+                        <tr>
+                            <td>SUBTOTAL</td>
+                            <td ng-bind="cart.totalPrice|currency"></td>
+                        </tr>
+                        <tr class="sub-symbol">
+                            <td>DISCOUNT APPLIED</td>
+                            <td ng-bind="('-' + cart.discount|currency)"></td>
+                        </tr>
+                        <tr>
+                            <td>ESTIMATED SHIPPING*<br><span class="light-msg">You qualify for free shipping</span></td>
+                            <td style="font-size:12px;">FREE</td>
+                        </tr>
+                        <tr>
+                            <td class="final-total">ESTIMATED TOTAL<br><span class="light-msg">Tax will be applied during checkout</span></td>
+                            <td>{{(cart.totalPrice - cart.discount)|currency}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer-logo">
+            <ul>
+                <li>
+                    <span class="continue-cls">CONTINUE SHOPPING</span>
+                    <button class="btn-primary">CHECKOUT</button>
+                </li>
+                <li class="lock-image"><img ng-src="../../content/Images/lock.jpg"><span>Secure checkout.Shipping is always safe & secure</span></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+
+
+
+
+

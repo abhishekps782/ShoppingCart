@@ -1,0 +1,300 @@
+
+
+body{
+    width:90%;
+    font-family:SansSerif;
+    font-size:14px;
+    color:slategray;
+    margin:0 auto;
+    padding:10px;
+    overflow:auto;
+    position:relative;
+    text-align:center;
+}
+
+tr .price-col,tr .size,tr .quantity,section .prod-title,.total-table tr td{
+    font-size:18px;
+    font-weight: 600;
+    color:#444;
+ }
+
+ div .spinner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("http://oi58.tinypic.com/2emfu9w.jpg") center center no-repeat;
+ }
+
+.user-action li a,.light-msg{
+    color:#298add;
+}
+
+aside .help-cls{
+    font-weight:bold;
+    color:black;
+}
+header .logo{
+    text-transform:capitalize;
+    font-size:26px;
+    text-align:left;
+}
+
+
+
+table tr th,td{
+    text-align:right;
+}
+
+table tr td:first-child,th:first-child{
+    text-align:left;
+}
+
+table tr td:first-child{
+    width:225px;
+    margin:0 auto;
+}
+
+table tr th:nth-child(2),td:nth-child(2){
+    width:350px;
+    text-align:left;
+}
+
+
+.user-action li,li{
+    display:inline;
+    list-style-type: none;
+}
+
+ul.price-calc{
+    text-align:left;
+}
+.col-lg-2 p{
+    text-align:left;
+}
+
+#image-loader-div{
+    height:100px;
+    width:100%;
+}
+
+img {
+    display: block;
+    max-height:120px;
+    width: auto;
+    height: auto;
+}
+
+.user-action li a{
+    cursor:pointer;
+}
+
+.user-action {
+    padding:0 ;
+}
+
+ .user-action li +  li::before {
+     content: " | ";
+ }
+
+ .pull-right{
+     float:right;
+ }
+
+.apply-coupon ul{
+    padding-left:10px;
+}
+
+section .btm-container{
+    margin-top:20px;
+}
+
+ .cls-total{
+     width:100%;
+ }
+
+.cls-total table{
+        border:none !important;
+        border-collapse:collapse;
+        width:100%;
+        max-height:30%;
+    }
+.cls-total table tr td{
+      width:50%;
+      text-align:right;
+      padding:10px;
+      margin-bottom:10px;
+  }
+
+.cls-total table tr td:first-child{
+    width:50%;
+    text-align:left;
+}
+
+.cls-checkout{
+    float:right;
+    margin:10px 0;
+    position:relative;
+}
+
+
+.footer-logo ul{
+    float:right;
+}
+.footer-logo ul li{
+    display:block;
+    margin-top:20px;
+}
+
+.continue-cls{
+    text-decoration: underline;
+    margin-right:10px;
+    
+}
+.lock-image img{
+    display:inline;
+
+}
+
+.lock-image span{
+    vertical-align: baseline;
+}
+
+.col-lg-3 p{
+    text-align:left;
+}
+
+
+
+
+ /************MODAL***********/
+
+
+div .prodTitle{
+    font-size:22px;
+}
+div .modal-body{
+    height:500px;
+}
+
+.col-lg-6{
+    width:50%;
+    height:350px !important;
+    float:right !important;
+    padding:50px 0 0 20px !important;
+}
+
+.col-lg-6 img{
+    display: block;
+    max-width:350px;
+    max-height:350px;
+    width: auto;
+    height: auto;
+}
+
+#color-style{
+    height:25px;
+    width:25px;
+    display:inline;
+    padding:5px;
+}
+
+.select-color {
+    padding-left:40px;
+}
+
+.price-para{
+    position:relative;
+    text-align:left;
+    padding-left:60px;
+}
+
+p .currency-cls{
+    margin-bottom:-10px;
+    font-size:20px;
+    margin-right:5px;
+    position:absolute;
+}
+
+p .price-cls{
+    font-size:40px;
+    padding-left:10px;
+}
+
+.select-box{
+    font-size:22px;
+}
+.qty input{
+    width:40px;
+    height:28px;
+}
+
+.size-select-cls select{
+    box-sizing:border-box;
+    height:28px;
+    width:110px;
+    margin-right:10px;
+}
+
+.edit-button button{
+    text-align:center;
+    padding:10px;
+    margin:20px 50px;
+    width:100px;
+    height:60px;
+    font-size:22px;
+    border-radius:0;
+}
+
+
+@media(max-width:1200px) {
+    aside{
+        display:none;
+        visibility:hidden;
+    }
+}
+
+@media(max-width:1000px){
+    .col-lg-6 img{
+        display: block;
+        max-width:200px;
+        max-height:200px;
+        width: 200px ;
+        height: 200px;
+    }
+    p .currency-cls{
+        margin-bottom:-10px;
+        font-size:10px;
+        margin-right:2.5px;
+        position:absolute;
+    }
+
+    p .price-cls{
+        font-size:20px;
+        padding-left:5px;
+    }
+
+    .select-box{
+        font-size:14px;
+    }
+    .qty input{
+        width:35px;
+        height:25px;
+    }
+
+    .size-select-cls select{
+        box-sizing:border-box;
+        height:25px;
+        width:70px;
+        margin-right:5px;
+    }
+
+    .edit-button button{
+        text-align:center;
+        padding:5px;
+        margin:10px 40px;
+        width:50px;
+        height:30px;
+        font-size:11px;
+        border-radius:0;
+    }
+}

@@ -1,0 +1,40 @@
+<div class="modal fade bs-example-modal-lg" id="{{'modal'+ cartModal.index}}">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"  aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+          <div class="col-lg-6" >
+            <p class="prodTitle" ng-bind="(cartModal.product.p_name|uppercase)"></p>
+            <p class="price-para">
+              <span class="currency-cls" ng-bind="cartModal.product.c_currency"></span>
+              <span class="price-cls" ng-bind="cartModal.product.p_price"></span>
+            </p>
+            <p class="select-color">
+              <span ng-repeat="color in cartModal.product.p_available_options.colors">
+                <button id="color-style" ng-click="cartModal.saveColor(color)" ng-style="{'background-color':color.hexcode}"></button>
+              </span>
+            </p>
+            <br>
+            <p class="select-box">
+              <span class="size-select-cls">
+                SIZE:<select ng-init="items=cartModal.product.p_available_options.sizes" ng-model="cartModal.selectedSize" ng-options="item.code as
+                item.name for item in items"></select>
+              </span>
+              <span class="qty">
+                QTY:<input type="number"  min="1" ng-model="cartModal.selectedQty"/>
+              </span>
+            </p>
+            <p class="edit-button">
+              <button class="btn-primary btn-lg" data-dismiss="modal" ng-click="cartModal.save();cartModal.calculate()">EDIT</button>
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <img ng-src="{{cartModal.product.imageSrc}}">
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
