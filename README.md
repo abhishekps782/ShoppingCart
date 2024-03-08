@@ -11,7 +11,7 @@
 3. The Total and Discount get automatically rendered in the shopping page at the bottom based on number of
    items
 
-4.User can remove item using the remove button and the total and discount will be automatically updated on
+4. User can remove item using the remove button and the total and discount will be automatically updated on
    the page.
 
 5. As the user moves on smaller screens, the help section disappers and the table is shown properly aligned
